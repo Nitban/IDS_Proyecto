@@ -29,5 +29,45 @@ int agregar(int lugar) {
  }
 
 int main() {
+  int final = 0;
+  int contador = 0;
+  int opcion;
+  int edicion = 0;
+  int elimina;
+  while (final == 0) {
+    printf("Que desea hacer?\n 1.Ingresar pelicula\n 2.Eliminar pelicula\n "
+           "3.Modificar pelicula\n 4.Mostrar peliculas\n 5.Salir\n");
+    scanf("%d", &opcion);
+    switch (opcion) {
+    case 1:
+      printf("si entro\n");
+        agregar(contador);
+        contador ++;
+
+      break;
+
+    case 2:
+      lista();
+      printf("\n¿Que pelicula desea eliminar?\n");
+      scanf("%i", &elimina);
+      eliminar(elimina);
+      break;
+
+    case 3:
+      lista();
+      printf("\n¿Que pelicula desea modificar?\n");
+      scanf("%d", &edicion);
+      editar(edicion);
+      break;
+
+    case 4:
+      lista();
+      break;
+
+    case 5:
+      final = 1;
+      break;
+    }
+  }
   
 }
