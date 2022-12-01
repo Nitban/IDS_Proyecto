@@ -28,6 +28,36 @@ int agregar(int lugar) {
    return 0;
  }
 
+// Funcion para editar peliculas
+int editar(int lugar) {
+  printf("Ingresa el nombre de la pelicula\n");
+  scanf("%s", &pelicula[lugar].nombre);
+  printf("\nIngresa el genero de la pelicula\n");
+  scanf("%s", &pelicula[lugar].genero);
+  printf("\nIngresa la duracion de la pelicula\n");
+  scanf("%s", &pelicula[lugar].duracion);
+  printf("\nIngresa una calificacion del 1 al 10\n");
+  scanf("%d", &pelicula[lugar].calificacion);
+  printf("\nIngresa el nombre del director de la pelicula\n");
+  scanf("%s", &pelicula[lugar].director);
+  printf("\nPelicula registrada con exito\n");
+  return 0;
+}
+
+// Funcion para mostrar todoas las peliculas
+int lista() {
+  printf("\nListado de peliculas\n");
+  for (int i = 0; i <= 10; i++) {
+    if (pelicula[i].nombre != " ") {
+      printf("%s  %s  %s  %d  %s\n", pelicula[i].nombre, pelicula[i].genero,
+             pelicula[i].duracion, pelicula[i].calificacion,
+             pelicula[i].director);
+    }
+  }
+  return 0;
+}
+
+
 int main() {
   int final = 0;
   int contador = 0;
